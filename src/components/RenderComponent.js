@@ -6,4 +6,4 @@ const RenderComponent = () => {
   )
 }
 
-export default RenderComponent
+export default RenderComponent;
