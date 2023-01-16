@@ -3,6 +3,23 @@ import { NavLink } from 'react-router-dom';
 import styled from 'styled-components';
 
 const Navbar = () => {
+    const MyNav = styled.nav`
+        .list{
+            display: flex;
+            gap: 4rem;
+        li{
+            .navbarlink{
+            list-style: none;
+                &:hover,
+                &:active {
+                    color: ${({theme}) => theme.colors.helper};
+                }
+            }
+        }
+        }
+
+    `;
+
     return (
         <MyNav>
             <div className='icon'>
@@ -25,19 +42,6 @@ const Navbar = () => {
     );
 }
 
-const MyNav = styled.nav`
-.list{
-    display: flex;
-    gap: 4rem;
-    list-style: none;
-    .navbarlink{
-        &:hover,
-        &:active {
-            color: ${(theme) => theme.colors.helper};
-        }
-    }
-}
 
-`;
 
 export default Navbar;
